@@ -1,6 +1,5 @@
 import { useState } from 'react'
-
-const CATEGORIES = ['coffee-basic', 'coffee-signature', 'milkshake', 'tea', 'food']
+import { CATEGORIES, formatCategory } from '../lib/categories'
 
 export default function MenuList({ items, loading, selectedId, onSelect, onAddNew, onToggleActive, onReorder }) {
   const [search, setSearch] = useState('')
@@ -36,7 +35,7 @@ export default function MenuList({ items, loading, selectedId, onSelect, onAddNe
         <input placeholder="Cari item..." value={search} onChange={(e) => setSearch(e.target.value)} />
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="all">Semua kategori</option>
-          {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+          {CATEGORIES.map((c) => <option key={c} value={c}>{formatCategory(c)}</option>)}
         </select>
       </div>
 
@@ -60,7 +59,10 @@ export default function MenuList({ items, loading, selectedId, onSelect, onAddNe
           )}
           <div className="menu-list-item-info" onClick={() => onSelect(item)}>
             <p className="menu-list-item-name">{item.name}</p>
-            <p className="menu-list-item-price">Rp {item.price?.toLocaleString('id-ID')}</p>
+            <div className="menu-list-item-meta">
+              <span className="category-badge">{formatCategory(item.category)}</span>
+              <p className="menu-list-item-price">Rp {item.price?.toLocaleString('id-ID')}</p>
+            </div>
           </div>
           <input type="checkbox" checked={item.active} onChange={() => onToggleActive(item)} title="Aktif/nonaktif" />
         </div>

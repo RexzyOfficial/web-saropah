@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabase'
-
-const CATEGORIES = ['coffee-basic', 'coffee-signature', 'milkshake', 'tea', 'food']
+import { CATEGORIES, formatCategory } from '../lib/categories'
 
 export default function MenuItemForm({ item, onChange, onSave, onDelete }) {
   const [uploading, setUploading] = useState(false)
@@ -36,7 +35,7 @@ export default function MenuItemForm({ item, onChange, onSave, onDelete }) {
         </label>
         <label style={{ flex: 1 }}>Kategori
           <select value={item.category} onChange={(e) => update('category', e.target.value)}>
-            {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+            {CATEGORIES.map((c) => <option key={c} value={c}>{formatCategory(c)}</option>)}
           </select>
         </label>
       </div>
