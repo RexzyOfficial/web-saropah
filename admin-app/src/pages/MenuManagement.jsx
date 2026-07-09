@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase'
 import MenuList from '../components/MenuList'
 import MenuItemForm from '../components/MenuItemForm'
 import LivePreview from '../components/LivePreview'
+import MenuStats from '../components/MenuStats'
 import Toast from '../components/Toast'
 
 const emptyItem = { name: '', price: '', description: '', image_url: '', category: 'coffee-basic', active: true }
@@ -71,6 +72,7 @@ export default function MenuManagement() {
   return (
     <div>
       <h1 className="page-title">Menu Management</h1>
+      <MenuStats items={items} />
       <div className="menu-management-grid">
         <MenuList
           items={items}
