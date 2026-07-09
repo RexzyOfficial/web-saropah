@@ -143,6 +143,9 @@ This makes the config publicly *readable* (so the popup can load it) but only *w
 - `contact.html` hero image now matches `visit.html` hero instead of an unrelated Unsplash placeholder.
 - Removed the unused "Autumn Chant" font, its `@font-face`, and its font file.
 - Added a skip-to-content link on every public page for keyboard/screen-reader accessibility.
+- **Admin dashboard visual refresh** (`/admin`): still monochrome, but with more depth and life — subtle shadows on panels/cards, hover lift on buttons and sidebar links, custom pill-style active/inactive toggle, category badges on each menu item, and a fade-in on panel load.
+- **Menu Management layout tightened up**: search + category filter now sit side-by-side instead of stacked, and selected/hover states on list items use a left accent bar instead of just a background change.
+- **New stats strip on Menu Management**: shows Total Item, Aktif, Nonaktif, and a per-category breakdown (chip per category with live count) above the menu list — extracted category logic into a shared `src/lib/categories.js` used by the list, form, and stats.
 
 ---
 © 2026 Kopi Saropah
