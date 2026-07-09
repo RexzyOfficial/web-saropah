@@ -117,18 +117,6 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
-    },
-    {
-      "source": "/admin/assets/(.*)",
-      "destination": "/admin/dist/assets/$1"
-    },
-    {
-      "source": "/admin",
-      "destination": "/admin/dist/index.html"
-    },
-    {
-      "source": "/admin/(.*)",
-      "destination": "/admin/dist/index.html"
     }
   ]
 }

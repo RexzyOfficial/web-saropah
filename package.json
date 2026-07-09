@@ -4,10 +4,9 @@
     "description": "Premium Coffee Experience Website (static site, no build step required)",
     "private": true,
     "scripts": {
-        "vercel-build": "cd admin-app && npm install && npm run build",
-        "minify-css": "cleancss -o assets/css/style.min.css assets/css/style.css",
-        "minify-js": "terser assets/js/main.js -o assets/js/main.min.js"
-    },
+    "minify-css": "cleancss -o assets/css/style.min.css assets/css/style.css",
+    "minify-js": "terser assets/js/main.js -o assets/js/main.min.js"
+},
     "devDependencies": {
         "clean-css-cli": "^5.6.2",
         "terser": "^5.19.2"

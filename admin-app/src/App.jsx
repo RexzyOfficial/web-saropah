@@ -26,7 +26,7 @@ function App() {
   if (loading) return <p style={{ padding: 20 }}>Loading...</p>
 
   return (
-    <BrowserRouter basename="/admin">
+    <BrowserRouter>
       <Routes>
         <Route path="/login" element={session ? <Navigate to="/menu" /> : <Login />} />
         <Route path="/" element={session ? <Layout /> : <Navigate to="/login" />}>
