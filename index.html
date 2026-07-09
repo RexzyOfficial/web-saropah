@@ -86,7 +86,16 @@
 </head>
 
 
-<body>
+<body class="is-loading">
+
+  <!-- ── Preloader ── -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <img src="/assets/images/logo.webp" alt="" class="preloader-logo" width="64" height="64">
+      <span class="preloader-word">KOPI SAROPAH</span>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
 
   <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
 
@@ -327,6 +336,7 @@
     </div>
   </footer>
 
+  <script src="/assets/js/preloader.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/whatsapp-widget.js"></script>
   <script src="/assets/js/supabase-config.js"></script>
