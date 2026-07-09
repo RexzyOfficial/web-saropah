@@ -1,0 +1,57 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.supabase.co; frame-src https://www.google.com; form-action 'self' https://api.web3forms.com;"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/coffee-basic"
+  to = "/coffee-basic.html"
+  status = 200
+
+[[redirects]]
+  from = "/coffee-signature"
+  to = "/coffee-signature.html"
+  status = 200
+
+[[redirects]]
+  from = "/milkshake"
+  to = "/milkshake.html"
+  status = 200
+
+[[redirects]]
+  from = "/tea"
+  to = "/tea.html"
+  status = 200
+
+[[redirects]]
+  from = "/food"
+  to = "/food.html"
+  status = 200
+
+[[redirects]]
+  from = "/visit"
+  to = "/visit.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200

@@ -1,0 +1,17 @@
+{
+    "name": "Kopi Saropah",
+    "short_name": "Kopi Saropah",
+    "description": "A Premium Coffee Experience Based on Trust",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#F8F5F2",
+    "theme_color": "#2C1810",
+    "icons": [
+        {
+            "src": "/assets/images/logo.webp",
+            "sizes": "500x500",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ]
+}

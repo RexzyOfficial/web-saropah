@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.supabase.co; frame-src https://www.google.com; form-action 'self' https://api.web3forms.com;">
+
+  <title>Kopi Saropah — Ngopi Sepuasnya, Bayar Seikhlasnya | Tangerang</title>
+  <meta name="description" content="Kopi Saropah adalah kafe premium di Tangerang dengan konsep bayar seikhlasnya. Nikmati kopi berkualitas tinggi dalam suasana yang hangat dan penuh kepercayaan.">
+  <meta name="keywords" content="kopi saropah, kafe tangerang, bayar seikhlasnya, kopi premium, coffee shop tangerang">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://web-saropah.vercel.app/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="/assets/images/logo.webp">
+  <link rel="apple-touch-icon" href="/assets/images/logo.webp">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://web-saropah.vercel.app/">
+  <meta property="og:title"       content="Kopi Saropah — Ngopi Sepuasnya, Bayar Seikhlasnya">
+  <meta property="og:description" content="Kafe premium di Tangerang dengan konsep bayar seikhlasnya. Kopi berkualitas tinggi, suasana hangat, penuh kepercayaan.">
+  <meta property="og:image"       content="https://web-saropah.vercel.app/assets/images/hero-barista.webp">
+  <meta property="og:locale"      content="id_ID">
+  <meta property="og:site_name"   content="Kopi Saropah">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Kopi Saropah — Ngopi Sepuasnya, Bayar Seikhlasnya">
+  <meta name="twitter:description" content="Kafe premium di Tangerang. Bayar seikhlasnya, kopi selalu berkualitas.">
+  <meta name="twitter:image"       content="https://web-saropah.vercel.app/assets/images/hero-barista.webp">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Kopi Saropah",
+    "description": "Kafe premium dengan konsep bayar seikhlasnya di Tangerang.",
+    "url": "https://web-saropah.vercel.app/",
+    "logo": "https://web-saropah.vercel.app/assets/images/logo.webp",
+    "image": "https://web-saropah.vercel.app/assets/images/hero-barista.webp",
+    "telephone": "+6283801350099",
+    "email": "kopisaropah@gmail.com",
+    "servesCuisine": "Coffee, Beverages",
+    "priceRange": "Rp 15.000 - Rp 30.000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Bahagia Raya No.d3 no 4 Gebang Raya, Kec. Periuk",
+      "addressLocality": "Kota Tangerang",
+      "addressRegion": "Banten",
+      "postalCode": "15132",
+      "addressCountry": "ID"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "22:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/kopi_saropah/",
+      "https://www.facebook.com/share/18A91errz5/",
+      "https://www.tiktok.com/@kopisaropah"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive-fixes.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNK9FF3W1J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YNK9FF3W1J');
+  </script>
+</head>
+
+
+<body>
+
+  <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+
+  <!-- ── Navigation ── -->
+  <header id="site-header">
+    <div class="container d-flex justify-between align-center">
+      <a href="index.html" class="logo" aria-label="Kopi Saropah — Home">
+        <img src="/assets/images/logo.webp" alt="Kopi Saropah" width="52" height="52">
+        <span>KOPI SAROPAH</span>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="menu-dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Menu</a>
+            <div class="dropdown-menu" role="menu">
+              <div class="dropdown-column">
+                <a href="#" class="category-link" data-category="coffee">Coffee <span class="arrow">›</span></a>
+                <div class="subcategory-menu">
+                  <a href="coffee-basic.html" role="menuitem">Basic</a>
+                  <a href="coffee-signature.html" role="menuitem">Signature</a>
+                </div>
+              </div>
+              <div class="dropdown-column">
+                <a href="milkshake.html" class="category-link" role="menuitem">Milk Shake</a>
+              </div>
+              <div class="dropdown-column">
+                <a href="tea.html" class="category-link" role="menuitem">Tea & Non-Coffee</a>
+              </div>
+              <div class="dropdown-column">
+                <a href="food.html" class="category-link" role="menuitem">Food & Snacks</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a data-order-link href="order.html" class="btn" aria-label="Order online">Order Now</a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero" aria-label="Hero banner" id="main-content" tabindex="-1">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="/assets/images/hero-barista.webp" alt="Barista sedang menuangkan kopi" width="1600" height="900" fetchpriority="high">
+      <div class="overlay"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <h1 class="script-text"><img src="/assets/images/saropah-script.png" alt="Saropah" class="script-logo"></h1>
+      <p class="hero-sub">Ngopi Sepuasnya&ensp;•&ensp;Bayar Seikhlasnya</p>
+      <p class="hero-tagline">A Premium Coffee Experience Based on Trust</p>
+      <div class="hero-actions">
+        <a href="coffee-basic.html" class="btn">Lihat Menu</a>
+        <a href="visit.html" class="btn btn-ghost">Kunjungi Kami</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"><span>↓</span></div>
+  </section>
+
+  <!-- ── Philosophy ── -->
+  <section class="philosophy" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-label section-label--light">Values</span>
+        <h2 id="philosophy-heading">Our Philosophy</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card text-center fade-in">
+          <div class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Trust</h3>
+          <p>Kami percaya pada kebaikan hati manusia. Model "bayar seikhlasnya" dibangun di atas rasa hormat dan kejujuran bersama.</p>
+        </article>
+
+        <article class="card text-center fade-in">
+          <div class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Community</h3>
+          <p>Lebih dari sekadar kedai kopi — Saropah adalah ruang berkumpul bagi para pencipta dan jiwa-jiwa hangat.</p>
+        </article>
+
+        <article class="card text-center fade-in">
+          <div class="icon-box" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Quality</h3>
+          <p>Kami tidak pernah berkompromi soal kualitas. Setiap cangkir diseduh dengan passion menggunakan biji kopi terbaik.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Best Seller ── -->
+  <section class="signature-menu" aria-labelledby="menu-heading">
+    <div class="container">
+      <div class="section-title fade-in">
+        <span class="section-label">Menu</span>
+        <h2 id="menu-heading">Best Seller</h2>
+        <p>Pilihan favorit pelanggan kami yang paling sering dipesan.</p>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="menu-card fade-in">
+          <div class="card-image">
+            <img src="/assets/images/saropah-coffee.webp" alt="Saropah Coffee — signature milk coffee" loading="lazy" width="800" height="600">
+          </div>
+          <div class="card-info">
+            <h3>Saropah Coffee</h3>
+            <div class="d-flex justify-between align-center">
+              <span class="price">Rp 23.000</span>
+              <a data-order-link href="order.html" class="btn-order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="card-image">
+            <img src="/assets/images/palm-sugar.webp" alt="Palm Sugar Coffee — cita rasa gula aren tradisional" loading="lazy" width="800" height="600">
+          </div>
+          <div class="card-info">
+            <h3>Palm Sugar Coffee</h3>
+            <div class="d-flex justify-between align-center">
+              <span class="price">Rp 24.000</span>
+              <a data-order-link href="order.html" class="btn-order">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="card-image">
+            <img src="/assets/images/butterscouth.webp" alt="Butterscotch Coffee — blend manis karamel mentega" loading="lazy" width="800" height="600">
+          </div>
+          <div class="card-info">
+            <h3>Butterscotch</h3>
+            <div class="d-flex justify-between align-center">
+              <span class="price">Rp 23.000</span>
+              <a data-order-link href="order.html" class="btn-order">Order</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="text-center" style="margin-top:2.5rem">
+        <a href="coffee-basic.html" class="btn">Lihat Semua Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section class="experience" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="split-layout d-flex align-center">
+        <div class="image-col fade-in">
+          <img src="/assets/images/hero-barista.webp" alt="Suasana hangat di Kopi Saropah" loading="lazy" width="1200" height="900">
+        </div>
+        <div class="text-col fade-in">
+          <div class="section-title text-left">
+            <span class="section-label">Experience</span>
+            <h2 id="experience-heading">More Than Just Coffee</h2>
+          </div>
+          <p>Di Kopi Saropah, kami menciptakan ruang untuk melepas penat dari kesibukan kota. Tempat di mana waktu terasa lambat, dan setiap tegukan adalah momen yang berharga.</p>
+          <p>Konsep kami bukan sekadar bisnis — ini tentang kepercayaan antara kami dan komunitas yang hadir setiap hari.</p>
+          <div class="stats grid grid-2" style="margin-top:2rem">
+            <div class="stat-item">
+              <h4>3+</h4>
+              <p>Tahun Berdiri</p>
+            </div>
+            <div class="stat-item">
+              <h4>∞</h4>
+              <p>Good Vibes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">KOPI SAROPAH</a>
+          <p>Ngopi Sepuasnya, Bayar Seikhlasnya.<br>Tempat berkumpul yang hangat, dibangun atas kepercayaan.</p>
+          <div class="footer-social" aria-label="Media sosial">
+            <a href="https://www.instagram.com/kopi_saropah/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Kopi Saropah">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/18A91errz5/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Kopi Saropah">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@kopisaropah" target="_blank" rel="noopener noreferrer" aria-label="TikTok Kopi Saropah">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 7.917v4.034a9.948 9.948 0 0 1-5-1.951v7.5a6.5 6.5 0 1 1-8-6.326v4.326a2.5 2.5 0 1 0 4 2v-14.5h4.083a6.005 6.005 0 0 0 4.917 5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="coffee-basic.html">Our Menu</a></li>
+            <li><a href="visit.html">Visit & Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hubungi Kami</h4>
+          <address style="font-style:normal">
+            <p>Jl. Bahagia Raya No.d3 no 4 Gebang Raya,<br>Kec. Periuk, Kota Tangerang, Banten 15132</p>
+            <p style="margin-top:0.75rem">
+              <a href="tel:+6283801350099" class="footer-link">+62 838-0135-0099</a><br>
+              <a href="mailto:kopisaropah@gmail.com" class="footer-link">kopisaropah@gmail.com</a>
+            </p>
+            <p style="margin-top:0.75rem;color:#999;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Buka Setiap Hari: 12.00 – 22.00 WIB</p>
+          </address>
+        </div>
+
+      </div>
+      <div class="footer-bottom text-center">
+        <p>© <span id="year"></span> Kopi Saropah. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/whatsapp-widget.js"></script>
+  <script src="/assets/js/supabase-config.js"></script>
+  <script src="/assets/js/promo-popup.js"></script>
+</body>
+</html>

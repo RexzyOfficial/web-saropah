@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://api.web3forms.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.supabase.co; frame-src https://www.google.com; form-action 'self' https://api.web3forms.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Shake - Kopi Saropah</title>
+    <meta name="description" content="Milk Shake Menu - Kopi Saropah">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/assets/images/logo.webp">
+    <link rel="apple-touch-icon" href="/assets/images/logo.webp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://web-saropah.vercel.app/milkshake">
+    <meta property="og:title" content="Milk Shake - Kopi Saropah">
+    <meta property="og:description" content="Milk Shake Menu - Kopi Saropah">
+    <meta property="og:image" content="https://web-saropah.vercel.app/assets/images/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://web-saropah.vercel.app/milkshake">
+    <meta property="twitter:title" content="Milk Shake - Kopi Saropah">
+    <meta property="twitter:description" content="Milk Shake Menu - Kopi Saropah">
+    <meta property="twitter:image" content="https://web-saropah.vercel.app/assets/images/logo.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/assets/css/style.css?v=2">
+    <link rel="stylesheet" href="/assets/css/responsive-fixes.css">
+    <link rel="manifest" href="/manifest.json">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNK9FF3W1J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YNK9FF3W1J');
+  </script>
+</head>
+
+
+<body data-category="milkshake">
+
+  <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="logo">
+                <img src="/assets/images/logo.webp" alt="Kopi Saropah Logo" width="60" height="60">
+                <span>KOPI SAROPAH</span>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#" class="dropdown-toggle">Menu</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-column">
+                                <a href="#" class="category-link" data-category="coffee">
+                                    Coffee <span class="arrow">›</span>
+                                </a>
+                                <div class="subcategory-menu">
+                                    <a href="coffee-basic.html">Basic</a>
+                                    <a href="coffee-signature.html">Signature</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="milkshake.html" class="category-link">
+                                    Milk Shake
+                                </a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="tea.html" class="category-link">
+                                    Tea & Non-Coffee
+                                </a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a href="food.html" class="category-link">
+                                    Food & Snacks
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a data-order-link href="order.html" class="btn">Order Now</a>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero" id="main-content" tabindex="-1">
+        <div class="menu-hero-content fade-in">
+            <h1>Milk Shake</h1>
+            <p>Cool, creamy, and delicious.</p>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="menu-content">
+        <div class="container">
+            <h2 class="category-title">Milk Shake</h2>
+
+            <div id="menu-container" class="menu-grid">
+                <!-- Items will be loaded dynamically -->
+                <div class="loader-placeholder">Loading menu...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">KOPI SAROPAH</a>
+                    <p>Ngopi Sepuasnya, Bayar Seikhlasnya.<br>A sanctuary for coffee lovers based on trust.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/kopi_saropah/" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="https://www.facebook.com/share/18A91errz5/" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="https://www.tiktok.com/@kopisaropah" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M21 7.917v4.034a9.948 9.948 0 0 1-5-1.951v7.5a6.5 6.5 0 1 1-8-6.326v4.326a2.5 2.5 0 1 0 4 2v-14.5h4.083a6.005 6.005 0 0 0 4.917 5z"></path>
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="coffee-basic.html">Menu</a></li>
+                        <li><a href="visit.html">Visit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>Jl. Bahagia Raya No.d3 no 4 Gebang Raya, Kec. Periuk,<br>Kota Tangerang, Banten 15132</p>
+                    <p class="mt-15">
+                        <a href="tel:+6283801350099" class="footer-link">+62 838-0135-0099</a><br>
+                        <a href="mailto:kopisaropah@gmail.com" class="footer-link">kopisaropah@gmail.com</a>
+                    </p>
+                    <p class="mt-15 accent-text">Open Daily: 12:00 PM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Kopi Saropah. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/menu-renderer.js"></script>
+    <script src="/assets/js/whatsapp-widget.js"></script>
+  <script src="/assets/js/supabase-config.js"></script>
+  <script src="/assets/js/promo-popup.js"></script>
+</body>
+
+</html>
