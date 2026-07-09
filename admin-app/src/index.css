@@ -283,3 +283,33 @@ button.btn-ghost:hover { background: var(--grey-10); }
 .preview-card-price { font-family: var(--font-caps); font-size: 0.75rem; font-weight: 700; color: var(--grey-60); letter-spacing: 0.05em; }
 
 .status-message { font-size: 13px; margin-top: 8px; }
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  animation: toast-in 0.2s ease;
+}
+
+.toast.error { background: #B3261E; }
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-list-item[draggable="true"] { cursor: grab; }
+.menu-list-item.dragging { opacity: 0.4; }
+.menu-list-item.drag-over { border-top: 2px solid var(--black); }
+.drag-handle { color: var(--grey-30); cursor: grab; display: flex; align-items: center; }
+.drag-hint { font-size: 11px; color: var(--text-muted); margin: 0 0 8px; }
