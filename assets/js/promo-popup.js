@@ -33,6 +33,21 @@
     if (cfg.freq === 'once')    localStorage.setItem(SEEN_DAY, new Date().toDateString());
   }
 
+  // Tracking sederhana: panggil RPC increment_promo_view / increment_promo_click.
+  // Best-effort — kalau gagal (offline, RPC belum di-setup, dll) diamkan saja,
+  // jangan sampai ganggu tampilnya popup.
+  function trackEvent(kind) {
+    const url = window.SAROPAH_SUPABASE_URL;
+    const key = window.SAROPAH_SUPABASE_ANON_KEY;
+    if (!url || !key || url.includes('YOUR-PROJECT-REF')) return;
+    fetch(`${url}/rest/v1/rpc/increment_promo_${kind}`, {
+      method: 'POST',
+      headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+      body: '{}',
+      keepalive: true,
+    }).catch(() => {});
+  }
+
   async function fetchConfig() {
     const url = window.SAROPAH_SUPABASE_URL;
     const key = window.SAROPAH_SUPABASE_ANON_KEY;
@@ -51,6 +66,8 @@
   }
 
   function buildPopup(cfg, isLandscape) {
+    trackEvent('view');
+
     const style = document.createElement('style');
     style.textContent = `
       #sp-overlay {
@@ -134,6 +151,7 @@
       const isMobile   = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       const isShopee   = /shopee\.co\.id/i.test(safeLink);
       const goToLink = () => {
+        trackEvent('click');
         markSeen(cfg);
         if (isShopee && !isMobile) {
           // Desktop/laptop can't open Shopee Food links directly —
