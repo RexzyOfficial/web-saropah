@@ -50,11 +50,44 @@ export default function PromoSettings() {
     if (error) setMessage('⚠️ ' + error.message)
   }
 
+  const handleResetStats = async () => {
+    if (!window.confirm('Reset statistik views & klik ke 0?')) return
+    const { error } = await supabase
+      .from('promo_config')
+      .update({ view_count: 0, click_count: 0 })
+      .eq('id', 1)
+    if (error) setMessage('⚠️ ' + error.message)
+    else fetchConfig()
+  }
+
   if (loading) return <p className="status-message">Loading...</p>
+
+  const views = config.view_count || 0
+  const clicks = config.click_count || 0
+  const ctr = views > 0 ? ((clicks / views) * 100).toFixed(1) : '0.0'
 
   return (
     <div>
       <h1 className="page-title">Promo Settings</h1>
+
+      <div className="stats-strip" style={{ gridTemplateColumns: 'repeat(3, minmax(110px, 150px))', maxWidth: 460 }}>
+        <div className="stat-card">
+          <p className="stat-value">{views}</p>
+          <p className="stat-label">Dilihat</p>
+        </div>
+        <div className="stat-card">
+          <p className="stat-value">{clicks}</p>
+          <p className="stat-label">Diklik</p>
+        </div>
+        <div className="stat-card">
+          <p className="stat-value">{ctr}%</p>
+          <p className="stat-label">CTR</p>
+        </div>
+      </div>
+      <button className="btn-ghost" onClick={handleResetStats} style={{ marginBottom: 20 }}>
+        Reset Statistik
+      </button>
+
       <div className="panel form-group" style={{ maxWidth: 400 }}>
         <label style={{ display: 'flex', alignItems: 'center', gap: 8, flexDirection: 'row' }}>
           <input type="checkbox" checked={config.active || false} onChange={handleToggleActive} style={{ width: 'auto' }} />
